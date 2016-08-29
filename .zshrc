@@ -100,14 +100,17 @@ alias userlist='cat /etc/passwd | cut -d ":" -f 1'
 alias shell='echo $0'
 alias die='exit'
 alias gg!='systemctl suspend -i'
+alias behave-net='service network-manager restart'
 alias steve='jobs'
 alias crap="espeak 'oh crap'"
+alias hg="espeak 'here goes nothing'"
 
 # utility and app launching
 alias sl='sl -e -l -a'
 alias bug='gdb -q'
 alias chrome='/usr/bin/google-chrome'
 alias droid='/usr/local/android-studio/bin/studio.sh'
+alias behave-droid='sudo /home/keenan/Android/Sdk/platform-tools/adb kill-server; sudo /home/keenan/Android/Sdk/platform-tools/adb start-server'
 
 # git
 alias gs='git status'
@@ -119,4 +122,5 @@ function dn() { cd $1 }
 function dnn() { cd $1; ll }
 function commands() { history | awk '{ print $2 }' | sort | uniq -c | sort -nr | head -20 }
 function services() { service --status-all | grep $1 || service --status-all }
+function jbuild() { javac $1.java; java $1 }
 
