@@ -83,6 +83,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# pathing for go language
+export GOPATH=$HOME/Dev/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export GOBIN=$GOPATH/bin
+
 # meta aliases       
 alias shortcuts='nano +86 ~/.zshrc'
 alias renew='source ~/.zshrc'
@@ -93,6 +98,7 @@ alias up='cd ..'
 alias upp='cd ..; ll;'
 alias new='mkdir'
 alias raze='rm -rf'
+alias dls='cd ~/Downloads'
 
 # system
 alias c='clear; printf "\n\n\n\n\n\n\n";'
@@ -106,6 +112,7 @@ alias crap="espeak 'oh crap'"
 alias hg="espeak 'here goes nothing'"
 
 # utility and app launching
+alias copy='xclip -selection c'
 alias sl='sl -e -l -a'
 alias bug='gdb -q'
 alias chrome='/usr/bin/google-chrome'
@@ -116,6 +123,8 @@ alias behave-droid='sudo /home/keenan/Android/Sdk/platform-tools/adb kill-server
 alias gs='git status'
 alias gclear='git checkout --'
 alias gbr='git branch'
+alias gnew='git checkout -b'
+alias push='git push'
 
 # custom function
 function dn() { cd $1 }
@@ -123,4 +132,5 @@ function dnn() { cd $1; ll }
 function commands() { history | awk '{ print $2 }' | sort | uniq -c | sort -nr | head -20 }
 function services() { service --status-all | grep $1 || service --status-all }
 function jbuild() { javac $1.java; java $1 }
+function news() { mkdir $1; cd $1 }
 
