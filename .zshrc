@@ -33,7 +33,7 @@ alias behave-net='service network-manager restart'
 
 # utility and app launching
 alias copy='xclip -selection c'
-alias deduplicate='awk '!a[$0]++''
+alias deduplicate="awk '!a[$0]++'"
 alias bug='gdb -q'
 alias chrome='/usr/bin/google-chrome'
 alias droid='/usr/local/android-studio/bin/studio.sh'
