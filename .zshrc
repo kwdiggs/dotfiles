@@ -2,7 +2,7 @@
 export ZSH=/home/keenan/.oh-my-zsh
 
 # housekeeping
-ZSH_THEME="robbyrussell"
+ZSH_THEME="random"
 plugins=(git)
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
@@ -24,6 +24,7 @@ alias raze='rm -rf'
 alias dls='cd ~/Downloads'
 
 # system
+alias lc='wc -l' # line count
 alias c='clear; printf "\n\n\n\n\n\n\n";'
 alias userlist='cat /etc/passwd | cut -d ":" -f 1'
 alias shell='echo $0'
@@ -33,7 +34,6 @@ alias behave-net='service network-manager restart'
 
 # utility and app launching
 alias copy='xclip -selection c'
-alias deduplicate="awk '!a[$0]++'"
 alias bug='gdb -q'
 alias chrome='/usr/bin/google-chrome'
 alias droid='/usr/local/android-studio/bin/studio.sh'
