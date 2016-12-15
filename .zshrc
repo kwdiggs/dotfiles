@@ -20,6 +20,7 @@ export GOBIN=$GOPATH/bin
 
 # meta aliases       
 alias shortcuts='nano +19 ~/.zshrc'
+alias short='shortcuts'
 alias renew='source ~/.zshrc'
 
 # file nav/management
